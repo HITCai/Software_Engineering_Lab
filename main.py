@@ -9,8 +9,8 @@ from random_walk import Random_Walk
 def main():
     # 获取文本文件名
     args = sys.argv
-    # file_name = args[1]
-    file_name = '1.txt'
+    file_name = args[1]
+    # file_name = '1.txt'
 
     # 生成有向图
     create_graph = Create_Directed_Graph(file_name=file_name)
