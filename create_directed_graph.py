@@ -21,7 +21,7 @@ class Create_Directed_Graph:
             text = ''.join(word for word in text if word.isalpha() or word.isspace())
 
             # 转换成小写字母
-            text = text.lower()
+            # text = text.lower()
 
         text = [s for s in text.split(' ') if len(s) != 0] # 获得单词列表
 
