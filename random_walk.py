@@ -54,11 +54,11 @@ class Random_Walk:
                 random_walk_list.append(random_word)
                 random_walk_edges.append(random_walk_edge)
 
-        output = ' '.join(word for word in random_walk_list)
-        print('随机游走结果为：',output)
-
-        # 写入输出文件
-        output_file = './output_file/output.txt'
-        with open(output_file,'w') as f:
-            f.write(output)
+        # output = ' '.join(word for word in random_walk_list)
+        # print('随机游走结果为：',output)
+        #
+        # # 写入输出文件
+        # output_file = './output_file/output.txt'
+        # with open(output_file,'w') as f:
+        #     f.write(output)
 
