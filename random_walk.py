@@ -54,14 +54,14 @@ class Random_Walk:
         with open(output_file, 'w') as f:
             f.write(output)
 
-    @staticmethod
-    def random_walk_process(matrix, word_list, random_word):
-        # 获取出边到达的节点
-        out_edge = [i for i in range(len(word_list)) if matrix[word_list.index(random_word)][i] != 0]
-        # 如果不存在出边
-        if len(out_edge) == 0:
-            return None, None
-        else:
-            random_out_word = word_list[random.choice(out_edge)]
-            return (random_word, random_out_word), random_out_word  # 返回随机游走的边和游走到的节点
+    # @staticmethod
+    # def random_walk_process(matrix, word_list, random_word):
+    #     # 获取出边到达的节点
+    #     out_edge = [i for i in range(len(word_list)) if matrix[word_list.index(random_word)][i] != 0]
+    #     # 如果不存在出边
+    #     if len(out_edge) == 0:
+    #         return None, None
+    #     else:
+    #         random_out_word = word_list[random.choice(out_edge)]
+    #         return (random_word, random_out_word), random_out_word  # 返回随机游走的边和游走到的节点
 
