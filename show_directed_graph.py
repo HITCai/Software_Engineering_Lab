@@ -16,11 +16,24 @@ class Show_Directed_Graph:
         self.file_name = file_name
 
     def showDirectedGraph(self,graph):
-        G = draw_graph(graph=graph)
+        # G = draw_graph(graph=graph)
+        #
+        # pos = nx.spring_layout(G)
+        # labels = nx.get_edge_attributes(G,'weight')
+        # nx.draw_networkx(G,pos,node_size=800)
+        # nx.draw_networkx_edge_labels(G,106,edge_labels=labels)
+        # plt.savefig('directed_graph/graph_' + self.file_name + '_.png')
+        # plt.show()
+
+        G = nx.DiGraph()
+        for key, value in graph.items():
+            key = list(key)
+            node1 = key[0]
+            node2 = key[1]
+            G.add_edge(node1, node2, weight=value)
 
         pos = nx.spring_layout(G)
-        labels = nx.get_edge_attributes(G,'weight')
-        nx.draw_networkx(G,pos,node_size=800)
-        nx.draw_networkx_edge_labels(G,pos,edge_labels=labels)
-        plt.savefig('directed_graph/graph_' + self.file_name + '_.png')
+        labels = nx.get_edge_attributes(G, 'weight')
+        nx.draw_networkx(G, pos, node_size=800)
+        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
         plt.show()
