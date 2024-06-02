@@ -22,5 +22,5 @@ class Show_Directed_Graph:
         labels = nx.get_edge_attributes(G,'weight')
         nx.draw_networkx(G,pos,node_size=800)
         nx.draw_networkx_edge_labels(G,pos,edge_labels=labels)
-        plt.savefig('directed_graph/graph_' + self.file_name + '_.png')
-        plt.show()
+        # plt.savefig('directed_graph/graph_' + self.file_name + '_.png')
+        # plt.show()
